@@ -6,13 +6,13 @@ import { api, RouterOutputs } from "~/utils/api";
 
 export const Notebook = () => {
     return (
-        <div className="h-screen">
+        <div className="h-full">
             {/* Make a subheading of these title sections later */}
             <h2
-                className="flex justify-center bg-base-100 p-4 ">
+                className="flex justify-center font-bold text-white bg-secondary-focus p-4">
                 Notebook
             </h2>
-
+            <div className="bg-secondary p-1 mb-5"/>
             <Content />
         </div>
     );

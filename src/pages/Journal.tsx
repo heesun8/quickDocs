@@ -9,7 +9,7 @@ import { api, type RouterOutputs } from "~/utils/api";
 
 export const Journal = () => {
     return (
-        <div className="h-screen">
+        <div className="h-full">
             <h2
                 className="flex justify-center font-bold text-white text-lg bg-accent-focus p-4">
                 Journal
@@ -55,7 +55,7 @@ const Content: React.FC = () => {
     })
 
     return (
-        <div>
+        <div className="full">
             <JournalEditor
                 onSave={({ title, content }) => {
                     void createJournal.mutate({

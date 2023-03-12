@@ -21,15 +21,14 @@ export const JournalEditor = ({
                         <input
                             type="text"
                             placeholder="Journal Title"
-                            className="card-title mt-2 input text-black"
+                            className="card-title mt-2 input text-black w-96"
                             value={title}
                             onChange={(e) => setTitle(e.currentTarget.value)}
                         />
                     </h2>
-                    <input
-                        type="text"
+                    <textarea
                         placeholder="What's on your mind?"
-                        className="card-body mt-2 input text-black"
+                        className="card-body textarea mt-2 input text-black h-96"
                         value={content}
                         onChange={(value) => setContent(value.currentTarget.value)}
                     />
