@@ -1,13 +1,17 @@
+import LogoutIcon from '@mui/icons-material/Logout';
+import NotesIcon from '@mui/icons-material/Notes';
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { Journal } from "~/pages/Journal";
+import Image from "next/image";
 
 export const Navbar = () => {
     const { data: sessionData } = useSession();
     return (
-        <div className="navbar bg-neutral text-primary-content">
+        <div className="navbar bg-neutral text-base-100">
             <div className="flex-1">
-                <Link href="/" className="text-lg font-bold">Home</Link>
+                <Link href="/" className="text-lg font-bold font-['Consolas'] flex">Home<Image src="/my-daily-headerIcon2.png" alt="navbar_icon." width={30} height={30}/></Link>
+                
             </div>
             <div className="flex flex-1 justify-end">
                 <div className="flex item-stretch">
@@ -26,15 +30,15 @@ export const Navbar = () => {
                             </label>
                             <ul
                                 tabIndex={0}
-                                className="flex menu dropdown-content bg-base-100 text-black rounded w-52 m-1 p-1"
+                                className="flex menu dropdown-content bg-base-100 text-black rounded border w-52 m-1 p-1"
                             >
-                                <li><Link href="/Journal"><button>Journal</button></Link></li>
-                                <li><Link href="/Notebook"><button>Notebook</button></Link></li>
-                                <li><Link href="/Stickies"><button>Stickies</button></Link></li>
+                                <li><Link href="/Journal"><button><NotesIcon fontSize="small"/> Journal</button></Link></li>
+                                <li><Link href="/Notebook"><button><NotesIcon fontSize="small"/> Notebook</button></Link></li>
+                                <li><Link href="/Stickies"><button><NotesIcon fontSize="small"/> Stickies</button></Link></li>
                                 <li><button
                                     className="text-error"
                                     onClick={()=> void signOut()}
-                                >Sign Out</button></li>
+                                ><LogoutIcon/>Sign Out</button></li>
                             </ul>
                         </div>
                     ) : (

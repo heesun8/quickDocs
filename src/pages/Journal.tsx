@@ -1,4 +1,5 @@
 import { type NextPage } from "next";
+import Image from "next/image";
 
 import { useSession } from "next-auth/react";
 import { useState } from "react";
@@ -9,12 +10,14 @@ import { api, type RouterOutputs } from "~/utils/api";
 
 export const Journal = () => {
     return (
-        <div className="h-full">
+        <div className="h-full bg-base-100">
             <h2
-                className="flex justify-center font-bold text-white text-lg bg-accent-focus p-4">
+                className="flex justify-center font-bold text-white text-lg bg-primary p-4">
                 Journal
+                <Image src="/journalIcon2.png" alt="navbar_icon." width={30} height={30}/>
+                {/*<Image/> nextjs for the lazy-loading function*/}
             </h2>
-            <div className="bg-accent p-1 mb-5"/>
+            <div className="bg-primary-focus p-1 mb-5"/>
             <Content />
         </div>
     );
@@ -55,7 +58,7 @@ const Content: React.FC = () => {
     })
 
     return (
-        <div className="full">
+        <div className="">
             <JournalEditor
                 onSave={({ title, content }) => {
                     void createJournal.mutate({
@@ -69,6 +72,12 @@ const Content: React.FC = () => {
                     <JournalCard
                         journal={journal}
                         onDelete={() => void deleteJournal.mutate({ id: journal.id })}
+                        onEdit={({ title, content})=>{
+                            void createJournal.mutate({
+                                title,
+                                content
+                            })
+                        }}
                     />
                     <div className="divider mr-10 ml-10" />
                 </div>

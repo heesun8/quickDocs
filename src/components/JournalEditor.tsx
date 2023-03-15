@@ -21,18 +21,18 @@ export const JournalEditor = ({
                         <input
                             type="text"
                             placeholder="Journal Title"
-                            className="card-title mt-2 input text-black w-96"
+                            className="card-title border border-primary mt-2 input text-black w-full sm:w-96"
                             value={title}
                             onChange={(e) => setTitle(e.currentTarget.value)}
                         />
                     </h2>
                     <textarea
                         placeholder="What's on your mind?"
-                        className="card-body textarea mt-2 input text-black h-96"
+                        className="card-body border border-primary textarea mt-2 input text-black h-96"
                         value={content}
                         onChange={(value) => setContent(value.currentTarget.value)}
                     />
-                    <div className="flex">
+                    <div className="flex mt-3">
                         <button
                             className="btn flex-1 mt-2"
                             onClick={()=> setClicked(false)}

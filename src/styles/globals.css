@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 body {
-    @apply text-black bg-gray-500;
+    @apply text-black;
     white-space: pre-line;
+    background-color: #1E90FF;
+    background-image: url("/asfalt-dark.png");
 }

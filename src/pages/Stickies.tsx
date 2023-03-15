@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { StickiesEditor } from "~/components/StickiesEditor";
@@ -6,9 +7,14 @@ import { api, RouterOutputs } from "~/utils/api";
 
 export const Stickies = () => {
     return (
-        <div className="h-full">
-            <h2 className="flex justify-center bg-primary-focus text-white text-lg font-bold p-4">Stickies</h2>
-            <div className="bg-primary p-1 mb-5"/>
+        <div className="h-full bg-base-100">
+            <h2
+                className="flex justify-center bg-success text-white text-lg font-bold p-4"
+            >
+                Stickies
+                <Image src="/stickiesIcon2.png" alt="navbar_icon." width={30} height={30} />
+            </h2>
+            <div className="bg-warning-content p-1 mb-5" />
             <Content />
         </div>
     );
@@ -47,23 +53,26 @@ const Content: React.FC = () => {
         }
     })
     return (
-        <div className="grid grid-cols-5">
-            <StickiesEditor
-                onSave={({ title, content }) => {
-                    void createStickies.mutate({
-                        title,
-                        content
-                    })
-                }}
-            />
-            {stickies?.map((stickie) => (
-                <div key={stickie.id}>
-                    <StickiesCard
-                        stickies={stickie}
-                        onDelete={() => void deleteStickies.mutate({ id: stickie.id })}
-                    />
-                </div>
-            ))}
+        <div className="h-screen">
+            <div className="grid lg:grid-cols-8 md:grid-cols-3 sm:grid-cols-4 md:gap-24">
+                <StickiesEditor
+                    onSave={({ title, content }) => {
+                        void createStickies.mutate({
+                            title,
+                            content
+                        })
+                    }}
+                />
+                {stickies?.map((stickie) => (
+                    <div key={stickie.id}>
+                        <StickiesCard
+                            stickies={stickie}
+                            onDelete={() => void deleteStickies.mutate({ id: stickie.id })}
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
+
     );
 }

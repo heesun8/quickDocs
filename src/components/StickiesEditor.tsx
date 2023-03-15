@@ -9,7 +9,7 @@ export const StickiesEditor = ({
     const [content, setContent] = useState<string>("");
     
     return (
-        <div className="card card-compact bg-base-100 w-40 m-5 shadow-xl">
+        <div className="card card-compact bg-base-100 border border-success w-40 m-5 shadow-md">
             <div className="card-body ">
                     <input
                         type="text"

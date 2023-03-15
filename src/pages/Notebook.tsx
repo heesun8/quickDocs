@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { NoteEditor } from "~/components/NoteEditor";
 import { NoteCard } from "~/components/NoteCard";
 import { useSession } from "next-auth/react";
@@ -6,11 +7,12 @@ import { api, RouterOutputs } from "~/utils/api";
 
 export const Notebook = () => {
     return (
-        <div className="h-full">
+        <div className="h-full bg-base-100">
             {/* Make a subheading of these title sections later */}
             <h2
                 className="flex justify-center font-bold text-white bg-secondary-focus p-4">
                 Notebook
+                <Image src="/notebookIcon2.png" alt="navbar_icon." width={30} height={30}/>
             </h2>
             <div className="bg-secondary p-1 mb-5"/>
             <Content />
@@ -25,6 +27,7 @@ type Topic = RouterOutputs["topic"]["getAll"][0];
 const Content: React.FC = () => {
     const { data: sessionData } = useSession();
     const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
+    const [active, setActive] = useState<string>("");
 
     //TOPICS
     const { data: topics, refetch: refetchTopics } = api.topic.getAll.useQuery(
@@ -71,12 +74,12 @@ const Content: React.FC = () => {
 
 
     return (
-        <div className="mt-5 mx-5 grid grid-cols-4 gap-2">
+        <div className=" lg:mt-5 lg:mx-5 grid md:grid-cols-4 grid-rows-3 gap-2 sm:mr-2">
             <div className="px-2">
                 <input
                     type="text"
                     placeholder="NoteBook Title"
-                    className="input input-bordered input-md w-full"
+                    className="input input-bordered border-black input-md w-full mt-2"
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
                             createTopic.mutate({
@@ -88,12 +91,12 @@ const Content: React.FC = () => {
                 />
                 <div className="divider" />
 
-                <ul className="menu rounded-box bg-base-100 w-56 p-1">
+                <ul className="menu flex rounded-box bg-base-100 border border-secondary w-56 p-1">
                     {topics?.map((topic) => (
                         <li key={topic.id}>
                             <a
                                 href="#"
-                                className="m-2 bg-base-300"
+                                className="m-2 bg-base-100 hover:bg-secondary hover:text-white focus:bg-secondary focus:text-white"
                                 onClick={(evt) => {
                                     evt.preventDefault();
                                     setSelectedTopic(topic);
@@ -107,7 +110,7 @@ const Content: React.FC = () => {
 
 
             </div>
-            <div className="col-span-3 flex-auto">
+            <div className="col-span-3 m-2 flex-auto">
                 <NoteEditor
                     onSave={({ title, content }) => {
                         void createNote.mutate({

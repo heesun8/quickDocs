@@ -11,17 +11,15 @@ export const NoteEditor = ({
     return (
         <div>
             {clicked ? (
-                <div className="card border border-gray-300 shadow-xl">
+                <div className="card border border-gray-300 shadow-xl md:ml-10 xlg:w-96">
                     <div className="card-body">
-                        <h2 className="card-title">
                             <input
                                 type="text"
                                 placeholder="Title"
                                 value={title}
-                                className="input"
+                                className="input card-title"
                                 onChange={(e) => setTitle(e.currentTarget.value)}
                             />
-                        </h2>
                         <input
                             type="text"
                             placeholder="Write note here"
@@ -32,11 +30,11 @@ export const NoteEditor = ({
                     </div>
                     <div className="card-actions justify-end">
                         <button
-                            className="btn btn-sm mb-2"
+                            className="btn btn-sm mb-2 bg-secondary"
                             onClick={()=> setClicked(false)}
                         >Cancel</button>
                         <button
-                            className="btn btn-sm mr-2 mb-2"
+                            className="bg-secondary text-white py-1 px-4 rounded-lg mr-2 mb-2 hover:bg-black"
                             disabled={title.trim().length === 0 || content.trim().length === 0}
                             //^Highlight the save button only after both inputs are filled. 
                             onClick={() => {
@@ -54,7 +52,7 @@ export const NoteEditor = ({
             ) : (
                 <div>
                     <button
-                    className="btn w-full" 
+                    className="btn w-full md:ml-10 md:w-96" 
                     onClick={()=> setClicked(true)}
                     >+ Add New Note</button>
                 </div>

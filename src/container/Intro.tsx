@@ -3,21 +3,27 @@ import Link from "next/link";
 
 export const Intro = () => {
     return (
-        <div className="justify-center h-screen bg-info">
-            <div className="flex justify-center grid bg-info text-white pb-5">
-                <h1
-                    className="text-white text-lg font-bold m-3"
-                >
-                    Daily
-                </h1>
-                <p className="text-md">All transactions in one place</p>
+        <div className="h-screen">
+            <div className="flex justify-center grid text-white pb-5 md:pl-10 pl-5">
+                <div className="flex text-white md:text-[50px] text-[30px] font-bold font-['Consolas'] m-10">
+                    <h1>QuickDocs</h1>
+                    <img src="/my-daily-headerIcon1.png" className="object-contain hover:scale-110"/>
+                </div>
+                <p className="md:pl-10 md:text-lg text-sm font-['Consolas']">Write IT down! Write THAT down!</p>
             </div>
-            <div className="bg-info-content p-2 mb-5"/>
+            <div className="bg-white shadow-xl" />
 
-            <div className="flex justify-center gap-10 mt-20">
-                <Link href="/Journal"><IntroCard src="/Journal.svg.png" alt="journal-icon." title="Journal" /></Link>
-                <Link href="/Notebook"><IntroCard src="/notebook.jpg" alt="notebook-icon." title="Notebook" /></Link>
-                <Link href="/Stickies"><IntroCard src="/sticky_note.png" alt="stickynote-icon." title="Stickies" /></Link>
+            <div className="flex justify-center font-['Consolas'] gap-[2rem] md:gap-[5rem] lg:gap-[7rem] mt-20">
+                <Link href="/Journal"><IntroCard src="/journalIcon2.png" alt="journal-icon." title="Journal" /></Link>
+                <Link href="/Notebook"><IntroCard src="/notebookIcon2.png" alt="notebook-icon." title="Notebook" /></Link>
+                <Link href="/Stickies"><IntroCard src="/stickiesIcon2.png" alt="stickynote-icon." title="Stickies" /></Link>
+            </div>
+            <div className="md:ml-10 lg:ml-48 md:mt-5 mt-10 ml-24 w-32 md:w-48">
+                <img
+                    src="/my-daily-icon2.png"
+                    alt="my_daily_icon."
+                    className=""
+                />
             </div>
 
         </div>
