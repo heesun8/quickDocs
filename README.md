@@ -5,11 +5,11 @@ This is a fullstack transcript app for Journaling, NoteTaking and Creating mini 
 ![project5](https://user-images.githubusercontent.com/55498566/225809952-7eeb5cfb-14d4-461d-875a-a88209e7bb1a.png)
 
 
-###Link to project: https://quick-docs-indol.vercel.app/
+### Link to project: https://quick-docs-indol.vercel.app/
 Needs to sign in to save personal content. 
 
 
-##Tech Used: 
+## Tech Used: 
 React, NextJs, Typescript, Next-Auth, Prisma, TRPC, Material UI, DaisyUI, TailwindCSS. 
 
 Run test using: npm run dev 
