@@ -6,9 +6,11 @@ import {
 } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { env } from "~/env.mjs";
 import { prisma } from "~/server/db";
+import { signIn } from "next-auth/react";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -45,8 +47,10 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+
   },
   adapter: PrismaAdapter(prisma),
+  
   providers: [
     GithubProvider({
       clientId: env.GITHUB_CLIENT_ID,
@@ -54,8 +58,31 @@ export const authOptions: NextAuthOptions = {
     }),
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,
-      clientSecret: env.GOOGLE_CLIENT_SECRET
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
     }),
+    //Below option might be okay but the above seems more secure so cut out for now
+  //   CredentialsProvider({
+  //     name: "Credentials",
+
+  //     credentials: {
+  //         userName: { label: "Username", type: "text", placeholder: "test123" },
+  //         password: { label: "Password", type: "password", placeholder: "0931" }
+  //     },
+  //     async authorize( credentials, req ) {
+  //         const user =  credentials as {
+  //             userName: string;
+  //             password: string;
+  //         };
+  //         if( user.userName === "test123" || user.password === "0931"){
+  //           return user as any
+  //         }
+  //         else {
+  //           throw new Error('Invalid credentials')
+
+  //         }
+
+  //     }
+  // })
     /**
      * ...add more providers here.
      *
