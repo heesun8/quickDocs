@@ -1,28 +1,19 @@
-# Create T3 App
+# QuickDocs App 
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a fullstack transcript app for Journaling, NoteTaking and Creating mini stickie notes. 
 
-## What's next? How do I make an app with this?
+![project5](https://user-images.githubusercontent.com/55498566/225809952-7eeb5cfb-14d4-461d-875a-a88209e7bb1a.png)
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+###Link to project: https://quick-docs-indol.vercel.app/
+Needs to sign in to save personal content. 
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
 
-## Learn More
+##Tech Used: 
+React, NextJs, Typescript, Next-Auth, Prisma, TRPC, Material UI, DaisyUI, TailwindCSS. 
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Run test using: npm run dev 
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Went with the nextJs SSR option because notetaking types of apps usually load slower the more data. Inlcuded a few lazy loading options as the site is split into different webpages, saving time on having to load everything at once for the user. This app isn't UI heavy so chose DaisyUI option for quick clean buttons and setups, while having MaterialUI add a more professional touch with its icons. With Next-Auth, instead of using credentials and making users create an account and password, making them sign in via providers is currently more secure; less hustle to memorize a new password as well. 
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
