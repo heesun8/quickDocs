@@ -1,6 +1,6 @@
 # QuickDocs App 
 
-This is a fullstack transcript app for Journaling, NoteTaking and Creating mini stickie notes. 
+This is a fullstack web responsive transcript app for Journaling, NoteTaking and Creating mini stickie notes. 
 
 ![project5](https://user-images.githubusercontent.com/55498566/225809952-7eeb5cfb-14d4-461d-875a-a88209e7bb1a.png)
 
