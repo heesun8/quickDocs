@@ -91,7 +91,7 @@ const Content: React.FC = () => {
                 />
                 <div className="divider" />
 
-                <ul className="menu flex rounded-box bg-base-100 border border-secondary w-56 p-1">
+                {topics? (<ul className="menu flex rounded-box bg-base-100 border border-secondary w-56 p-1">
                     {topics?.map((topic) => (
                         <li key={topic.id}>
                             <a
@@ -106,7 +106,7 @@ const Content: React.FC = () => {
                             </a>
                         </li>
                     ))}
-                </ul>
+                </ul>) : ""}
 
 
             </div>

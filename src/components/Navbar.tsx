@@ -10,7 +10,7 @@ export const Navbar = () => {
     return (
         <div className="navbar bg-neutral text-base-100">
             <div className="flex-1">
-                <Link href="/" className="text-lg font-bold font-['Consolas'] flex">Home<Image src="/my-daily-headerIcon2.png" alt="navbar_icon." width={30} height={30}/></Link>
+                <Link href="/" className="text-xl font-bold font-['Consolas'] tracking-wider flex ml-2">Home</Link>
                 
             </div>
             <div className="flex flex-1 justify-end">
