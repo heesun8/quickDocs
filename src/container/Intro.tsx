@@ -25,6 +25,11 @@ export const Intro = () => {
                     className=""
                 />
             </div>
+            <div className="flex justify-center md:justify-end">
+                <div className="bg-slate-100 hover:bg-sky-500 hover:text-slate-100 m-4 mt-16 p-2 px-4 border border-2 border-sky-500">
+                    <Link href="/about"><h2 className="font-['Consolas'] font-semibold">About Page</h2></Link>
+                </div>
+            </div>
 
         </div>
     );
