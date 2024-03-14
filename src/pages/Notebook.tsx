@@ -121,7 +121,7 @@ const Content: React.FC = () => {
                     }}
                 />
                 <div>
-                    {notes?.map((note: { id: Key | null | undefined; }) => (
+                    {notes?.map((note) => (
                         <div key={note.id} className="mt-5">
                             <NoteCard
                                 note={note}
