@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Image from "next/image";
 
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { Key, useState } from "react";
 import { JournalEditor } from "~/components/JournalEditor";
 import { JournalCard } from "~/components/JournalCard";
 
@@ -67,7 +67,7 @@ const Content: React.FC = () => {
                     })
                 }}
             />
-            {journals?.map((journal) => (
+            {journals?.map((journal: { id: Key | null | undefined; }) => (
                 <div key={journal.id}>
                     <JournalCard
                         journal={journal}

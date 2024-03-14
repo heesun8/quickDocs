@@ -2,7 +2,7 @@ import Image from "next/image";
 import { NoteEditor } from "~/components/NoteEditor";
 import { NoteCard } from "~/components/NoteCard";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { JSXElementConstructor, Key, ReactElement, ReactFragment, ReactPortal, useState } from "react";
 import { api, RouterOutputs } from "~/utils/api";
 
 export const Notebook = () => {
@@ -92,7 +92,7 @@ const Content: React.FC = () => {
                 <div className="divider" />
 
                 {topics? (<ul className="menu flex rounded-box bg-base-100 border border-secondary w-56 p-1">
-                    {topics?.map((topic) => (
+                    {topics?.map((topic: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }) => (
                         <li key={topic.id}>
                             <a
                                 href="#"
@@ -121,7 +121,7 @@ const Content: React.FC = () => {
                     }}
                 />
                 <div>
-                    {notes?.map((note) => (
+                    {notes?.map((note: { id: Key | null | undefined; }) => (
                         <div key={note.id} className="mt-5">
                             <NoteCard
                                 note={note}
