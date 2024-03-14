@@ -92,7 +92,7 @@ const Content: React.FC = () => {
                 <div className="divider" />
 
                 {topics? (<ul className="menu flex rounded-box bg-base-100 border border-secondary w-56 p-1">
-                    {topics?.map((topic: { id: Key | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; }) => (
+                    {topics?.map((topic) => (
                         <li key={topic.id}>
                             <a
                                 href="#"

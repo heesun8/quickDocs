@@ -67,7 +67,7 @@ const Content: React.FC = () => {
                     })
                 }}
             />
-            {journals?.map((journal: { id: Key | null | undefined; }) => (
+            {journals?.map((journal) => (
                 <div key={journal.id}>
                     <JournalCard
                         journal={journal}
