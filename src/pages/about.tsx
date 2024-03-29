@@ -4,7 +4,7 @@ export const About = () => {
     return(
         <>
         <div className="h-[100%] flex justify-center mt-10">
-            <div className="bg-slate-100 w-[50%] mb-10 border border-2 border-sky-900">
+            <div className="bg-slate-100 w-[80%] md:w-[50%] mb-10 border border-2 border-sky-900">
                 <h1 className="font-bold font-['Consolas'] text-3xl m-4">About</h1>
                 <p className="m-4">You have to sign in with google to see and save your stuff. Anyone can sign in. If you sign in, you&apos;ll get access to any notes you save until you personally delete them. 
 
