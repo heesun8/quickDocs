@@ -13,7 +13,7 @@ When you sign in, google will share your name, email and profile picture with me
 If you have any questions, you can ask me. Be sure to include an email address so I know where to send the reply.</p>
                 
                 <h1 className="font-bold font-['Consolas'] text-3xl m-4 mt-10">Google OAuth2 Homepage</h1>
-                <p className="m-4">Accurately represents your app&apos;s identity: The QuickDocs App</p><Link href="https://quick-docs-indol.vercel.app/" className="text-sky-500 mx-4 flex justify-center">https://quick-docs-indol.vercel.app/</Link> <p className="m-4"> is a note taking app created by Heesun. It&apos;s not a company or a business or something you can install on your phone. It&apos;s just a website. It just lets you notetake.
+                <p className="m-4">Accurately represents your app&apos;s identity: The QuickDocs App</p><Link href="https://quick-docs-indol.vercel.app/" className="text-sky-500 mx-4 flex justify-center">https://quick-docs-indol.vercel.app/</Link> <p className="m-4"> is a note taking app created by me. It&apos;s not a company or a business or something you can install on your phone. It&apos;s a website. It lets you transcribe.
 
                 <p className="my-4">What will this app do with user data? The only user data received is: name, email, notes and profile picture. These will be saved and re-displayed to the user. The email will be used to reply to messages sent by the user. The email will be used to identify the user.</p>
 
