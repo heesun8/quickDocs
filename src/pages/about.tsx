@@ -19,7 +19,7 @@ If you have any questions, you can ask me. Be sure to include an email address s
 
 Personalized content is only displayed to signed in users.
 
-Describe the content, context, or connection to the app: The QuickDocs is this website, which is a notetaking app. The intention is for the user to transcribe and organize their thoughts.</p>
+The QuickDocs is this website, which is a notetaking app. The intention is for the user to transcribe and organize their thoughts.</p>
                 <h1 className="font-bold font-['Consolas'] text-3xl m-4 mt-10">Google OAuth2 Limited Use Disclosure</h1>
                 <p className="m-4">This app doesn&apos;t request restricted scopes, but if it did, the QuickDocs app use of information received from Google APIs will adhere to the </p> <Link href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" className="m-4 text-sky-500 flex justify-center">Google API Services User Data Policy</Link> <p className="m-4">including the Limited Use requirements.</p>
                 <h1 className="font-bold font-['Consolas'] text-3xl m-4 mt-10">Copyright</h1>
