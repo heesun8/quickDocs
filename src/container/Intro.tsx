@@ -18,7 +18,7 @@ export const Intro = () => {
                 <Link href="/Notebook"><IntroCard src="/notebookIcon2.png" alt="notebook-icon." title="Notebook" /></Link>
                 <Link href="/Stickies"><IntroCard src="/stickiesIcon2.png" alt="stickynote-icon." title="Stickies" /></Link>
             </div>
-            <div className="md:ml-10 lg:ml-48 md:mt-5 mt-10 ml-24 w-32 md:w-48">
+            <div className="flex justify-center ml-10 mt-16">
                 <img
                     src="/my-daily-icon2.png"
                     alt="my_daily_icon."
